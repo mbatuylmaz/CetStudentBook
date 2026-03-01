@@ -13,7 +13,7 @@ namespace CetStudentBook.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Yazar adı zorunludur.")]
-        [StringLength(200, MinimumLength = 2)]
+        [StringLength(200, MinimumLength = 2, ErrorMessage = "Yazar adı 2 ile 200 karakter arasında olmalıdır.")]
         [Display(Name = "Yazar")]
         public string Author { get; set; }
 
