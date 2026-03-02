@@ -100,16 +100,13 @@ The Books table was created using migration `20260302005218_AddBooksTable`.
 ### Screenshots
 
 #### Books List Page
-![Books List Page](screenshots/books-list.png)
-The list page displays all books in a table format with columns for Name, Author, Publish Date, Page Count, and Is Second Hand status. Each row includes Edit and Delete action buttons.
+![Books List Page](screenshots/Book%20List.jpg)
 
 #### Edit Page with Validation Errors
-![Edit Page with Validation Errors](screenshots/edit-validation.png)
-The edit page shows validation errors when input doesn't meet requirements. In this example, the Author field shows an error because "S" is too short (minimum 2 characters), and Page Count shows an error because "0" is outside the valid range (1-10000).
+![Edit Page with Validation Errors](screenshots/Edit%20Book%20Page.jpg)
 
 #### Delete Confirmation Page
-![Delete Confirmation Page](screenshots/delete-confirmation.png)
-The delete page displays a confirmation screen showing all book details before deletion. Users can review the information and confirm or cancel the deletion.
+![Delete Confirmation Page](screenshots/Delete%20Book%20Page.jpg)
 
 ### Navigation
 
