@@ -1,34 +1,34 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace CetStudentBook.Models
 {
     public class Book
     {
-        [Key] // Birincil anahtar (Primary Key) olduğunu belirtir
+        [Key]
         public int Id { get; set; }
 
-        [StringLength(200, MinimumLength = 2)]
-        [Display(Name = "Book Name")]
-        public string Name { get; set; }
+        [Required(ErrorMessage = "Name is required.")]
+        [StringLength(200, MinimumLength = 2, ErrorMessage = "Name must be between 2 and 200 characters.")]
+        [Display(Name = "Name")]
+        public string Name { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Yazar adı zorunludur.")]
-        [StringLength(200, MinimumLength = 2, ErrorMessage = "Yazar adı 2 ile 200 karakter arasında olmalıdır.")]
-        [Display(Name = "Yazar")]
-        public string Author { get; set; }
+        [Required(ErrorMessage = "Author is required.")]
+        [StringLength(200, MinimumLength = 2, ErrorMessage = "Author must be between 2 and 200 characters.")]
+        [Display(Name = "Author")]
+        public string Author { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Yayın tarihi zorunludur.")]
+        [Required(ErrorMessage = "Publish date is required.")]
         [DataType(DataType.Date)]
-        [Display(Name = "Yayın Tarihi")]
+        [Display(Name = "Publish Date")]
         public DateTime PublishDate { get; set; }
 
-        [Required(ErrorMessage = "Sayfa sayısı zorunludur.")]
-        [Range(1, 10000, ErrorMessage = "Sayfa sayısı 1 ile 10.000 arasında olmalıdır.")]
-        [Display(Name = "Sayfa Sayısı")]
+        [Required(ErrorMessage = "Page count is required.")]
+        [Range(1, 10000, ErrorMessage = "Page count must be between 1 and 10000.")]
+        [Display(Name = "Page Count")]
         public int PageCount { get; set; }
 
         [Required]
-        [Display(Name = "İkinci El mi?")]
+        [Display(Name = "Is Second Hand")]
         public bool IsSecondHand { get; set; }
     }
 }
